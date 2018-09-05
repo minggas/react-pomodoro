@@ -1,0 +1,8 @@
+.minus, .plus {
+    background: transparent;
+    font-size: calc(1.1rem + 0.7vw);
+    padding: 0 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-weight: bold
+}

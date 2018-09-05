@@ -1,0 +1,46 @@
+.buttons button {
+    border: none;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    width: 90px;
+    margin: 10px;
+    font-size: 1.3rem;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, .6),
+                inset -1px -1px 2px rgba(0, 0, 0, .6);
+}
+
+.buttons button:active {
+    top: 2px;
+    color: hsl(0, 0%, 70%);
+    border: 2px;
+}
+
+.pause {
+    border: 1px solid hsl(60, 100%, 22%);
+    background: linear-gradient(hsl(60, 93%, 59%), hsl(60, 94%, 36%));;
+}
+
+.pause:active {
+    background: hsl(60, 94%, 26%);
+}
+
+.start {
+    border: 1px solid hsl(100, 96%, 17%);
+    background: linear-gradient(hsl(100, 93%, 59%), hsl(100, 94%, 36%));;
+}
+
+.start:active {
+    background: hsl(100, 94%, 26%);
+}
+
+.stop {
+    border: 1px solid hsl(0, 96%, 17%);
+    background: linear-gradient(hsl(0, 93%, 59%), hsl(0, 94%, 36%));;
+}
+
+.stop:active {
+    background: hsl(0, 94%, 26%);
+}

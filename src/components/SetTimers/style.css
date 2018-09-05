@@ -1,0 +1,7 @@
+.setter {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: calc(1rem + 1vw);
+    margin-bottom: 20px;
+}
