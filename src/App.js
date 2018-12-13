@@ -136,7 +136,7 @@ class App extends Component {
         <audio
           id="beep"
           preload="auto"
-          src="https://minggas.github.io/vue-pomodoro/alarm.mp3"
+          src="https://onlineclock.net/audio/options/default.mp3"
           ref={audio => {
             this.audioBeep = audio;
           }}
