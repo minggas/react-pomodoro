@@ -5,7 +5,7 @@ import './style.css';
 class Buttons extends Component { 
   render() {
     return (
-      <div class="buttons">
+      <div className="buttons">
         <button className={this.props.running ? 'pause' : 'start'} id="start_stop" onClick={this.props.startStopTimer}>{this.props.running?'Pause':'Start'}</button>
         <button className="stop" id="reset" onClick={this.props.resetTimer}>Reset</button>
     </div>

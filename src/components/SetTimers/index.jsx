@@ -32,7 +32,7 @@ class SetTimers extends Component {
     }
 }
 
-SetTimers.PropTypes = {
+SetTimers.propTypes = {
     sessionTime: PropTypes.number.isRequired,
     breakTime: PropTypes.number.isRequired,
     setTime: PropTypes.func.isRequired
