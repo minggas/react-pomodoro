@@ -20,8 +20,8 @@ class Timer extends Component {
     }
 }
 
-Timer.PropTypes = {
-    label: PropTypes.string
+Timer.propTypes = {
+    label: PropTypes.bool
 }
 
 export default Timer;

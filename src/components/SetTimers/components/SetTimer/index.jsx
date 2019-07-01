@@ -15,7 +15,7 @@ const SetTimer =  (props) => {
     )
 }
 
-SetTimer.PropTypes = {
+SetTimer.propTypes = {
     values: PropTypes.object.isRequired,
     setTime: PropTypes.func.isRequired
 }
