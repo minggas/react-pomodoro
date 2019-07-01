@@ -4,6 +4,7 @@ import Timer from "./components/Timer";
 import Buttons from "./components/Buttons";
 import Footer from "./components/Footer";
 import "./App.css";
+import alarm from "./default.mp3";
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class App extends Component {
       "session-length": 25,
       "break-length": 5,
       running: false,
-      isSession: true
+      isSession: true,
     };
   }
 
@@ -28,22 +29,22 @@ class App extends Component {
       if (e.target.textContent === "-" && this.state[value] > 1) {
         this.setState({
           [value]: this.state[value] - 1,
-          countdown: this.state.countdown - 60
+          countdown: this.state.countdown - 60,
         });
       } else if (e.target.textContent === "+" && this.state[value] < 60) {
         this.setState({
           [value]: this.state[value] + 1,
-          countdown: this.state.countdown + 60
+          countdown: this.state.countdown + 60,
         });
       }
     } else {
       if (e.target.textContent === "-" && this.state[value] > 1) {
         this.setState({
-          [value]: this.state[value] - 1
+          [value]: this.state[value] - 1,
         });
       } else if (e.target.textContent === "+" && this.state[value] < 60) {
         this.setState({
-          [value]: this.state[value] + 1
+          [value]: this.state[value] + 1,
         });
       }
     }
@@ -64,7 +65,7 @@ class App extends Component {
       intervalID: setInterval(() => {
         this.runTime();
         this.timerControl();
-      }, 1000)
+      }, 1000),
     });
   };
 
@@ -97,7 +98,7 @@ class App extends Component {
   switchTimer = (num, str) => {
     this.setState({
       countdown: num,
-      isSession: str
+      isSession: str,
     });
   };
 
@@ -108,7 +109,7 @@ class App extends Component {
       running: false,
       isSession: true,
       countdown: 1500,
-      intervalID: null
+      intervalID: null,
     });
     this.state.intervalID && clearInterval(this.state.intervalID);
     this.audioBeep.pause();
@@ -136,7 +137,7 @@ class App extends Component {
         <audio
           id="beep"
           preload="auto"
-          src="https://onlineclock.net/audio/options/default.mp3"
+          src={alarm}
           ref={audio => {
             this.audioBeep = audio;
           }}
